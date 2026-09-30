@@ -1,0 +1,62 @@
+<!-- defferent between background-attachment: scroll , local-->
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .box {
+        width: 300px;
+        height: 150px;
+        overflow: auto; /* مهم: يعمل scroll داخلي */
+        border: 2px solid black;
+        margin: 20px;
+        padding: 10px;
+
+        /* خلفية بخطوط عشان الحركة تبان */
+        background-image: repeating-linear-gradient(
+          to bottom,
+          #ffd54f 0px,
+          #ffd54f 30px,
+          #4fc3f7 30px,
+          #4fc3f7 60px
+        );
+      }
+
+      .a {
+        background-attachment: scroll;
+      }
+      .b {
+        background-attachment: local;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>scroll</h3>
+    <div class="box a">
+      <p>سطر 1</p>
+      <p>سطر 2</p>
+      <p>سطر 3</p>
+      <p>سطر 4</p>
+      <p>سطر 5</p>
+      <p>سطر 6</p>
+      <p>سطر 7</p>
+      <p>سطر 8</p>
+      <p>سطر 9</p>
+      <p>سطر 10</p>
+    </div>
+
+    <h3>local</h3>
+    <div class="box b">
+      <p>سطر 1</p>
+      <p>سطر 2</p>
+      <p>سطر 3</p>
+      <p>سطر 4</p>
+      <p>سطر 5</p>
+      <p>سطر 6</p>
+      <p>سطر 7</p>
+      <p>سطر 8</p>
+      <p>سطر 9</p>
+      <p>سطر 10</p>
+    </div>
+  </body>
+</html>
